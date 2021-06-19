@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<title>Assignment</title>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+.sidenav{overflow: auto;
+  position: relative;
+}
+
+.vertical-menu {
+  width: 235px; 
+  height: 512px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover, .vertical-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.slideshow{margin-top: 10px;
+  margin-left: 20px;
+}
+
+#heading:hover{color: white;
+}
+</style>
+</head>
+
+<body>
+<div class = "container">
+<div class = "row">
+<div class = "col-7"><img src = "http://gettechnotes.com/Images/Logo2.png" alt = "GetTechNotes"></div>
+<div class = "col-5" style = "font-style: italic; color: brown; margin-top: 30px;"><h5>A comprehensive platform to learn programming</h5></div>
+</div>
+</div>
+
+<div class = "navbar navbar-expand-sm bg-dark navbar-dark sticky-top" style = "height: 50px">
+<ul class = "navbar-nav">
+<li class = "nav-item">
+<div  style = "border-right: 1px solid white">
+<a class = "navbar-brand nav-link" id = "heading" href = "#">GetTechNotes</a>
+</div>
+</li>
+<li class = "nav-item">
+<a class = "nav-link" id = "heading" href = "#">Core JAVA</a>
+</li>
+<li class = "nav-item">
+<a class = "nav-link" id = "heading" href = "#">Java Windows Applications</a>
+</li>
+<li class = "nav-item">
+<a class = "nav-link" id = "heading" href = "#">JDBC</a>
+</li>
+<li class = "nav-item">
+<a class = "nav-link" id = "heading" href = "#">Servlet</a>
+</li>
+<li class = "nav-item">
+<a class = "nav-link" id = "heading" href = "#">JSP</a>
+</li>
+</ul>
+</div>
+
+<div class = "container-fluid">
+<div class = "row">
+<div class = "col-sm-2 sidenav" id = "side" style = "padding-left: 0px; margin-top: 0px">
+<div class = "vertical-menu" id = "menu">
+<a href = "#"><b>Learn Java Language</b></a>
+<a href = "#" class = "active">Introduction</a>
+<a href = "#">Basic OOPS Concepts</a>
+<a href = "#">Simple Java Program</a>
+<a href = "#">Naming Conventions</a>
+<a href = "#">Data Types</a>
+<a href = "#">Type Casting</a>
+<a href = "#">Classes and Objects</a>
+<a href = "#">Wrapper Classes</a>
+<a href = "#">Receiving User Input</a>
+<a href = "#">Encapsulation and Abstraction</a>
+<a href = "#">Constructor</a>
+<a href = "#">Inheritance</a>
+<a href = "#">Access Specifiers</a>
+<a href = "#">abstract Keyword</a>
+<a href = "#">Anonymous Class</a>
+<a href = "#">final Keyword</a>
+<a href = "#">static Keyword</a>
+<a href = "#">Arrays</a>
+<a href = "#">Varargs</a>
+<a href = "#">Object Class</a>
+<a href = "#">Interface</a>
+<a href = "#">String Handling</a>
+<a href = "#">Exception Handling</a>
+<a href = "#">Multithreading</a>
+</div>
+</div>
+
+<div class = "col-sm-8 slideshow">
+<br>
+<div id  = "demo" class = "carousel slide" data-ride = "carousel">
+<ul class = "carousel-indicators">
+<li data-target = "#demo" data-slide-to = "0" class = "active"></li>
+<li data-target = "#demo" data-slide-to = "1"></li>
+<li data-target = "#demo" data-slide-to = "2"></li>
+</ul>
+
+<div class = "carousel-inner">
+<div class = "carousel-item active">
+<img src = "https://www.w3schools.com/w3images/newyork2.jpg" alt = "New York" style = "height: 700px; width: 900px">
+<div class = "carousel-caption">
+<h1>New York</h1>
+</div>
+</div>
+<div class = "carousel-item">
+<img src = "https://www.w3schools.com/w3images/pisa.jpg" alt = "Pisa" style = "height: 700px; width: 900px">
+<div class = "carousel-caption">
+<h1>Pisa</h1>
+</div>
+</div>
+<div class = "carousel-item">
+<img src = "https://www.w3schools.com/w3images/ocean2.jpg" alt = "Norway" style = "height: 700px; width: 900px">
+<div class = "carousel-caption">
+<h1>Norway</h1>
+</div>
+</div>
+</div>
+
+<a class = "carousel-control-prev" href = "#demo" data-slide = "prev">
+<span class = "carousel-control-prev-icon"></span>
+</a>
+<a class = "carousel-control-next" href = "#demo" data-slide = "next">
+<span class = "carousel-control-next-icon"></span>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+<br>
+
+<script>
+	var s = document.getElementById("side");
+	var n = document.getElementById("menu");
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+			s.style.marginTop = "-62px";
+			n.style.height = "576px";
+		} 
+		else {
+			s.style.marginTop = "0px";
+			n.style.height = "512px";
+		}
+	}
+</script>
+
+</body>
+</html>
